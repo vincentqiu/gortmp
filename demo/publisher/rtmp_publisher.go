@@ -35,7 +35,7 @@ var status uint
 
 func (handler *TestOutboundConnHandler) OnStatus(conn rtmp.OutboundConn) {
 	var err error
-	status, err = obConn.Status()
+	status, err = conn.Status()
 	fmt.Printf("@@@@@@@@@@@@@status: %d, err: %v\n", status, err)
 }
 
